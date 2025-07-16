@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gladys' Lab & Lens</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <h1>Gladys' Lab & Lens</h1>
+  </header>
+
+  <!-- NAVBAR -->
+  <div class="sticky-header">
+    <div class="header-container">
+      <div class="logo">GS</div>
+      <nav>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="navMenu">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#lens">Lens: Content Portofolio</a></li>
+          <li><a href="#lab">Lab: Project Kuliah</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="container-about-profile">
+      <div class="about-card">
+        <h2 class="section-title">About Me</h2>
+        <p>Hai! Aku <strong>Gladys Shavilla</strong> — mahasiswa Teknologi Informasi yang suka menggabungkan dunia logika dan estetika. Dari ngoding aplikasi Android seperti SiCatat, sampai bikin desain konten yang girly dan dreamy, semua aku kerjakan dengan penuh rasa ingin tahu dan cinta terhadap detail.</p>
+        <p>Aku percaya bahwa teknologi bisa tampil fungsional dan cantik. Itulah kenapa aku tertarik mengembangkan aplikasi yang clean, simpel, tapi tetap user-friendly, sekaligus mengekspresikan sisi kreatifku lewat desain feed dan reels yang soft dan estetik.</p>
+        <p>Website ini aku buat sebagai rumah digital untuk menyimpan karya, eksperimen, dan proyek-proyek seru yang sedang (atau pernah) aku kerjakan. Semoga bisa jadi inspirasi atau bahkan awal kolaborasi! </p>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-content">
+        <h2 class="section-title">My Information</h2>
+          <img src="https://i.imgur.com/LJ0fdv0.jpg" class="profile-photo" alt="Gladys Shavilla" />
+          <h2 class="profile-name">Gladys Shavilla</h2>
+          <p><i class="fas fa-map-marker-alt"></i> Kebon Jeruk, Jakarta Barat</p>
+          <p><i class="fas fa-envelope"></i> gshavilla@gmail.com</p>
+          <p><i class="fas fa-phone-alt"></i> 0895-1333-3484</p>
+          <div class="contact-links">
+            <a href="mailto:gshavilla@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://instagram.com/uranusmu._" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://linkedin.com/in/gladys-shavilla-tarigan-sibero-878728245/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LENS SECTION -->
+ <section id="lens">
+  <div class="lens-wrapper-card">
+    <h2 class="section-title">💕 Lens: Content Portofolio</h2>
+    <p class="section-subtitle" style="text-align:center; color:#888; margin-bottom:20px;">
+      Beberapa desain feed, banner, dan sertifikat 🎀
+    </p>
+
+    <div class="carousel-wrapper">
+      <!-- Tombol kiri -->
+      <button class="scroll-btn left" onclick="scrollLens(-1)">&#8249;</button>
+
+      <!-- Carousel konten -->
+      <div class="carousel" id="lens-carousel">
+        <div class="card">
+          <img src="images/kenaikan isa almasih.png" alt="Poster Kenaikan Isa Almasih" />
+          <p class="img-caption">Poster Kenaikan Isa Almasih</p>
+        </div>
+        <div class="card">
+          <img src="images/hari kartini.png" alt="Poster Hari Kartini" />
+          <p class="img-caption">Poster Hari Kartini</p>
+        </div>
+        <div class="card">
+          <img src="images/Open Recruitment.png" alt="Poster Open Recruitment" />
+          <p class="img-caption">Poster Open Recruitment</p>
+        </div>
+        <div class="card">
+          <img src="images/Sertifikat Mobee.png" alt="Sertifikat Mobee" />
+          <p class="img-caption">Sertifikat Mobee</p>
+        </div>
+      </div>
+
+      <!-- Tombol kanan -->
+      <button class="scroll-btn right" onclick="scrollLens(1)">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  function scrollLens(direction) {
+    const carousel = document.getElementById("lens-carousel");
+    const scrollAmount = 300; // kamu bisa atur sesuai lebar card
+    carousel.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+  <!-- LAB SECTION -->
+ <section id="lab">
+  <div class="lens-wrapper-card">
+    <h2 class="section-title">🌷 Lab: Project Kuliah</h2>
+    <p class="section-subtitle" style="text-align:center; color:#888; margin-bottom:20px;">
+      Beberapa proyek Android dan Website 👩🏻‍💻
+    </p>
+
+    <div class="carousel-wrapper">
+      <!-- Tombol geser kiri -->
+      <button class="scroll-btn left" onclick="scrollLab(-1)">&#8249;</button>
+
+      <!-- Carousel konten lab -->
+      <div class="carousel" id="lab-carousel">
+        <div class="card">
+          <img src="images/sicatat.jpeg" alt="SiCatat Screenshot" />
+          <p class="img-caption">SiCatat – Aplikasi Keuangan</p>
+        </div>
+        <div class="card">
+          <img src="assets/image/todo.png" alt="coming soon" />
+          <p class="img-caption">coming soon</p>
+        </div>
+        <div class="card">
+          <img src="assets/image/uiux.png" alt="coming soon" />
+          <p class="img-caption">Coming soon</p>
+        </div>
+      </div>
+
+      <!-- Tombol geser kanan -->
+      <button class="scroll-btn right" onclick="scrollLab(1)">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  function scrollLab(direction) {
+    const carousel = document.getElementById("lab-carousel");
+    const scrollAmount = 300;
+    carousel.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+
+
+  <!-- EDUCATION SECTION -->
+  <section id="education" style="background-color:#fff0f5; padding: 50px 20px;">
+    <div class="skills-card">
+    <h2 class="section-title">🎓 Education</h2>
+    <div class="education-container">
+      <div class="edu-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="University Icon" />
+        <h3>Universitas Mohammad Husni Thamrin Jakarta</h3>
+        <p>Teknik Informatika (2023–Sekarang)</p>
+      </div>
+      <div class="edu-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2942/2942833.png" alt="SMA Icon" />
+        <h3>SMK Al - Basyariah</h3>
+        <p>Rekayasa Perangkat Lunak (2020–2023)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+ <section id="skills">
+  <div class="skills-card">
+    <h2 class="section-title">🧠 Skills</h2>
+    
+    <div class="skills-static-cards">
+      
+      <!-- Hard Skills -->
+      <div class="skill-card">
+        <h3>💻 Hard Skills</h3>
+        
+        <!-- Android App Development -->
+        <h4>📱 Android App Development</h4>
+        <ul>
+          <li>Java (Android Studio)</li>
+          <li>Form & UI XML</li>
+          <li>Database Lokal (SQLite, SharedPreferences)</li>
+          <li>Firebase: Autentikasi & Realtime Database</li>
+          <li>Manajemen Transaksi</li>
+        </ul>
+        
+        <!-- Content Creation -->
+        <h4>🎨 Content Creation</h4>
+        <ul>
+          <li>Instagram Reels & Feed Design</li>
+          <li>Tools: Canva, CapCut, VN</li>
+          <li>Konsistensi Branding Visual</li>
+          <li>Pemilihan warna, font, dan layout</li>
+        </ul>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="skill-card">
+        <h3>🌸 Soft Skills</h3>
+        <ul>
+          <li>Creative Thinking</li>
+          <li>Problem Solving</li>
+          <li>Attention to Detail</li>
+          <li>Team Collaboration</li>
+          <li>Time Management</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Gladys Shavilla. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
