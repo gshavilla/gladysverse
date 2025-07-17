@@ -170,6 +170,35 @@ nav a:hover {
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+/* Sembunyikan menu saat layar kecil */
+@media (max-width: 768px) {
+  .nav-links ul {
+    display: none;
+    flex-direction: column;
+    background-color: #ffe4e1;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .nav-links.active ul {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+/* Default: Sembunyikan hamburger di desktop */
+.hamburger {
+  display: none;
+}
 
 .profile-card .section-title {
   font-family: 'Playfair Display', serif;
@@ -540,3 +569,28 @@ footer {
     font-size: 1.4rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  #navMenu {
+    display: none;
+    flex-direction: column;
+    background: #ffe4e1;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  #navMenu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
+
