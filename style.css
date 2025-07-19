@@ -570,27 +570,54 @@ footer {
   }
 }
 
-@media screen and (max-width: 768px) {
+/* Mobile header layout fix */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #c71585;
+    padding: 10px;
+  }
+
   #navMenu {
     display: none;
     flex-direction: column;
-    background: #ffe4e1;
+    background-color: #ffe4e1;
     position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 20px;
+    top: 60px;
+    right: 16px;
+    padding: 16px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    width: max-content;
   }
 
   #navMenu.show {
     display: flex;
   }
 
-  .hamburger {
-    display: block;
-    font-size: 1.8rem;
-    cursor: pointer;
+  #navMenu li {
+    margin: 10px 0;
+  }
+
+  #navMenu a {
+    font-weight: 600;
+    color: #c71585;
+    text-decoration: none;
+    font-size: 1rem;
   }
 }
 

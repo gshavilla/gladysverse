@@ -109,7 +109,7 @@
 <script>
   function scrollLens(direction) {
     const carousel = document.getElementById("lens-carousel");
-    const scrollAmount = 300; // kamu bisa atur sesuai lebar card
+    const scrollAmount = 300;
     carousel.scrollBy({
       left: direction * scrollAmount,
       behavior: "smooth"
@@ -131,13 +131,13 @@
 
       <!-- Carousel konten lab -->
       <div class="carousel" id="lab-carousel">
+         <div class="card">
+          <img src="images/CRUD data mahasiswa.jpeg" alt="Crud Data Mahasiswa" />
+          <p class="img-caption">CRUD Data Mahasiswa</p>
+         </div>
         <div class="card">
           <img src="images/sicatat.jpeg" alt="SiCatat Screenshot" />
           <p class="img-caption">SiCatat – Aplikasi Keuangan</p>
-        </div>
-        <div class="card">
-          <img src="assets/image/todo.png" alt="coming soon" />
-          <p class="img-caption">coming soon</p>
         </div>
         <div class="card">
           <img src="assets/image/uiux.png" alt="coming soon" />
